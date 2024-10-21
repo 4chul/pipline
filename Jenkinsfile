@@ -30,7 +30,7 @@ node {
     }
     stage('SonarQube Analysis') {
         def scannerHome = tool 'SonarScaner';  // название инструмента, которое вы указали в Jenkins
-        withSonarQubeEnv('pipline') {  // название SonarQube сервера, которое вы указали
+        withSonarQubeEnv('SonarQube') {  // название SonarQube сервера, которое вы указали
             sh "${scannerHome}/bin/sonar-scanner"
         }
     }
