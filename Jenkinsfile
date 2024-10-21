@@ -37,6 +37,8 @@ node {
 }
 
 stage('Check Secrets with TruffleHog') {
-    sh '/usr/local/bin/trufflehog https://github.com/4chul/pipline.git'
+    node {
+        sh '/usr/local/bin/trufflehog https://github.com/4chul/pipline.git'
+    }
 }
 
