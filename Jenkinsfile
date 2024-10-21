@@ -29,7 +29,7 @@ node {
         checkout scm
     }
     stage('SonarQube Analysis') {
-        def scannerHome = tool 'SonarScanner';  // название инструмента, которое вы указали в Jenkins
+        def scannerHome = tool 'SonarScaner';  // название инструмента, которое вы указали в Jenkins
         withSonarQubeEnv('SonarQube') {  // название SonarQube сервера, которое вы указали
             sh "${scannerHome}/bin/sonar-scanner"
         }
