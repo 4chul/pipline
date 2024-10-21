@@ -35,3 +35,9 @@ node {
         }
     }
 }
+
+stage('Check Secrets with TruffleHog') {
+    steps {
+        sh 'trufflehog https://github.com/4chul/pipline.git'
+    }
+}
